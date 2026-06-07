@@ -90,10 +90,10 @@ func (c *Cache) HeadSHA() string { return c.headSHA }
 // Returns nil, err only on hard failures (git binary missing,
 // subprocess crash, ctx cancellation).
 //
-// The scan runs three git invocations concurrently after the initial
-// rev-parse and waits for all of them. ctx propagates to each
-// subprocess via exec.CommandContext, so a cancelled walk tears the
-// git processes down promptly.
+// After the initial rev-parse, the scan runs three git invocations in
+// sequence (two ls-files passes and one log pass). ctx propagates to
+// each subprocess via exec.CommandContext, so a cancelled walk tears
+// the git processes down promptly.
 func New(ctx context.Context, root string) (*Cache, error) {
 	repoRoot, err := repoToplevel(ctx, root)
 	if err != nil {
