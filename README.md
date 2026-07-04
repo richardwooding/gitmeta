@@ -5,6 +5,8 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/richardwooding/gitmeta)](https://goreportcard.com/report/github.com/richardwooding/gitmeta)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+**Website:** [richardwooding.github.io/gitmeta](https://richardwooding.github.io/gitmeta/)
+
 Fast **per-file git metadata** for Go — last-commit time / author / subject, first-seen,
 commit count (churn), and tracked / ignored status — resolved by scanning a working tree
 **once** and answering per-path lookups in constant time. **Zero dependencies** (shells out
