@@ -69,6 +69,12 @@ cache, err := pool.Get(ctx, root) // built once per repo, refreshed when HEAD mo
 - The system **`git`** binary on `PATH` (`gitmeta.HasGitBinary()` reports its presence;
   `New` returns a nil `Cache` when git is absent or the path isn't a working tree).
 
+## Sponsor
+
+If this saves you time, you can [sponsor its maintenance](https://github.com/sponsors/richardwooding).
+Sponsorship pays for the unglamorous half — triage, dependency bumps, release plumbing — and is
+never a condition of getting help here.
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
